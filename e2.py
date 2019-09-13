@@ -8,7 +8,7 @@ def transform(ch, mapping, alpha):
 	return mapping[i]
 
 def check_mapping(mapping, alpha):
-	string = ''.join(sotred(list(mapping)))
+	string = ''.join(sorted(list(mapping)))
 	return string == alpha
 
 # mode 0 when -o not present , mode 1 when -o present 
@@ -50,7 +50,7 @@ def main():
 	except:
 	    parser.print_help()
 	    sys.exit(0)
-	# print(args.mapping)
+		
 	alpha = 'abcdefghijklmnopqrstuvwxyz'
 	# mapping = "yxzwvtsqpnrmlkjgfdchbuoaie"
 	# string = "QwertyuioP1234"

@@ -1,0 +1,15 @@
+Usage: substitution [-o] [-d] mapping
+Where:
+   -o: keep non-letters as is, honor letter casing
+   -d: decrypt
+   mapping: 26 letter char-mapping
+            or an int-value
+
+En/Decrypts stdin to stdout. Only letters are encrypted,
+all other characters are silently ignored, unless -o was
+specified, in which case they are used as-is.
+When -o is specified, letter casing is honored, otherwise all
+letters are converted to lower-case letters.
+Use an int-value to do a letter shift (% 26, 0: a = a)
+Shift 3 is the classical Caesar encryption
+

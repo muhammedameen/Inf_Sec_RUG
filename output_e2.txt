@@ -1,0 +1,26 @@
+Nine common security awareness mistakes (and how to fix them)
+
+To err is human, but to err in cyber security can cause serious and major
+damage. 
+
+Perfect security may be hard or impossible to achieve, but major improvements
+are possible, just by being aware of some of the most common mistakes and their
+consequences. By being aware of these mistakes allows you to avoid them.
+
+Here are the nine common security awareness mistakes, don't make 'em yourself:
+
+1. Falling for phishing: One of the most common mistakes.
+2. Unauthorized application or cloud use, known as shadow IT.
+3. Weak or misused passwords
+4. Remote insecurity: This is the common practice of transferring files
+   between work and personal computers  
+5. Disabling security controls: This is usually done by users with
+   administrative privileges, to make things easier for employees 
+6. Clueless social networking
+7. Poor mobile security
+8. Too many privileges
+9. Failure to update or patch software
+
+See also http://www.csoonline.com/article/2877259/security-awareness/
+            nine-common-security-awareness-mistakes-and-how-to-fix-them.html
+

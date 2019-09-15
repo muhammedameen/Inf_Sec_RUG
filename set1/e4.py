@@ -1,7 +1,7 @@
 import sys
 import math
 import numpy
-import statistics
+import re
 
 def threeMostFrequentLetters(array):
 	alphabet = 'abcdefghijklmnopqrstuvwxyz'
@@ -53,6 +53,9 @@ def main() :
 	with open('ex4_schneier.enc', 'r') as myfile:
 			text = myfile.read()
 	
+	re.sub('[^a-zA-Z]+', '', text)
+	print(text)
+
 	#part one, showing the most likely key size
 	bigStDev = 0
 	for keySize in range(5,16):

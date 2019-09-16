@@ -11,8 +11,9 @@ def encrypt(text, mapping):
 	for ch in text:
 		# XORing the ASCII values
 		result += chr(ord(ch) ^ ord(mapping[pointer]))
+		print(ord(ch) ^ ord(mapping[pointer]))
 		pointer += 1
-		print(result)
+		# print(result)
 		# print(ord(ch) ^ ord(mapping[pointer]))
 	return result
 
@@ -31,8 +32,12 @@ def main():
 		sys.exit(0)
 
 	msg1 = encrypt(text, mapping1)
-	# print(msg1)
-	print(encrypt(msg1, mapping1))
+	print(msg1)
+	# print(encrypt(msg1, mapping1))
+	alt_org_txt = encrypt(msg1, mapping2)
+	print(alt_org_txt)
+
+	print(encrypt(alt_org_txt, mapping2))
 
 if __name__ == "__main__":
     main()

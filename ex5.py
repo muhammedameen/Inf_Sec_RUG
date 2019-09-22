@@ -13,9 +13,9 @@ def main() :
     print(hash1)
     print(hash2)
 
-def keyz() :
+# def keyz() :
 
-def feistel() :
+# def feistel() :
 
 if __name__ == "__main__":
     main()

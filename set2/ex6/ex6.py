@@ -1,5 +1,6 @@
 import sys 
 import binascii
+import numpy
 
 ########## ENCRYPTION #########
 
@@ -15,7 +16,6 @@ def getEncryptedValue(weightValue, publicKey):
     for idx in range(0,len(publicKey)):
         if (weightValue & 1): #there is a 1 on the first bit
             value += publicKey[idx]
-            #print(publicKey[idx])
         weightValue >>= 1 #shift one step to the right
     
     return value
@@ -62,13 +62,22 @@ def main():
     privateKey = [1,3,7,12,25,48,96,194,388,775,1550,3101,6200,12413,24843,49726]
     n = 149112
     m = 25
-    text = "Hello World!"
-    publicKey = getPublicKey(privateKey,n,m)
-    encryptedMessage = encrypt(text,publicKey)
-    print("encryption", encryptedMessage)
-    originalText = decrypt(encryptedMessage,n,privateKey)
-    print("original text: ",originalText)
-    
+
+    while(True):
+        mode = input("Press 'e' for encrypting or 'd' for decrypting ")
+
+        if (mode == 'e'):
+            publicKey = getPublicKey(privateKey,n,m)
+            print("public key used for encryption: ", publicKey)
+            text = input("Enter the text you want to encrypt \n")
+            print("here is your encrypted text: \n", encrypt(text,publicKey))
+            break; 
+        elif (mode == 'd'):
+            fileName = input("Enter the file name: ")
+            with open(fileName, 'r') as file:
+                encryptedMessage = numpy.fromfile(file,dtype=int, count = -1, sep = " ")
+            print("original text:\n",decrypt(encryptedMessage,n,privateKey)) 
+            break
 
 if __name__ == "__main__":
     main()

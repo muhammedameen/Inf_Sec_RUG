@@ -1,0 +1,36 @@
+//Steps to perform when using the CBC blockcipher mode
+
+
+//Encryption - Given plaintext
+iv = initialisation_vector
+k = KEY
+no_of_blocks = block_length(PlainText)
+codeblocks[no_of_blocks]
+counter = 0
+prev_codeblock = iv
+
+//Encrypting the plain text block wise into code blocks
+while counter < no_of_blocks:
+	text = readPlainText
+	codeblocks[counter] = E(k,prev_codeblock xor text)
+	prev_codeblock = codeblocks[counter]
+	counter++
+
+return codeblocks
+
+
+//Decryption - given codeblocks
+iv = initialisation_vector
+k = KEY
+no_of_blocks = block_length(codeblocks)
+plaintext[no_of_blocks]
+counter = 0
+prev_codeblock = iv
+
+//Decrypting the code blocks to obatain the plain text
+while counter < no_of_blocks:
+	plaintext[counter] = prev_codeblock xor D(k, codeblocks[counter])
+	prev_codeblock = codeblocks[counter]
+	counter++
+
+return plaintext

@@ -1,3 +1,4 @@
+import sys
 import hashlib
 
 def keyScheduling(key):
@@ -24,12 +25,13 @@ def pseudoRandomGeneration(permutations):
 
 def main():
     keyChar = input("Supply the key you want to use: ")
+    print (sys.stdin.buffer.read())
 
     #put the key in binary 
     key = ''.join(format(ord(i), 'b') for i in keyChar)
     print(key) 
-    permutations = keyScheduling(key)
-    pseudoRandomGeneration(permutations)
+    #permutations = keyScheduling(key)
+    #pseudoRandomGeneration(permutations)
 
 if __name__ == "__main__":
     main()

@@ -1,5 +1,6 @@
 import sys
 
+#Function to compute base^power % modulus
 def largePower(base, power ,modulus):
     if (power == 1):
         return base
@@ -11,14 +12,10 @@ def largePower(base, power ,modulus):
     else:
         return returned
     
-
+    
 def main(): 
-    base, power, modulus = input("Enter: base power modulus").split()
-    #print(largePower(43210,23456,99987))
-    print(largePower(base,power,modulus))
-
-
-
+    base, power, modulus = [int(x) for x in input("Enter base power modulus: \n").split()]
+    print(base, "^", power, "%", modulus, "=", largePower(base,power,modulus) )
 
 if __name__ == "__main__":
     main()

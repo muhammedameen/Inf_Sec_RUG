@@ -1,7 +1,7 @@
 import sys
 
-a = 11
-N = 167
+a = 13
+N = 157
 
 def addPoints(point1, point2, same):
     if (same):
@@ -35,18 +35,21 @@ def multiplyWithPoint(multiplier,point):
     for idx in reversed(idxPoints):
         pointFinal = addPoints(pointFinal, points[idx], False)
 
-    print(idxPoints)
-    print(points)
     return pointFinal
 
 
         
 
 def main():
-    point0 = [2,7] #point P0 = (x,y)
+    point0 = [3,11] #point P0 = (x,y)
     multiplier = 22
     b = ( point0[1]*point0[1] - point0[0]**3 - a*point0[0] ) % N
+    print("b: ", b) 
     print(multiplyWithPoint(multiplier,point0))
+
+    #shared point
+    sharedPoint = multiplyWithPoint(multiplier,[102,22])
+    print(sharedPoint)
     
 
 

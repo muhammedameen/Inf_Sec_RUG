@@ -35,10 +35,7 @@ def multiplyWithPoint(multiplier,point):
     for idx in reversed(idxPoints):
         pointFinal = addPoints(pointFinal, points[idx], False)
 
-    return pointFinal
-
-
-        
+    return pointFinal   
 
 def main():
     point0 = [3,11] #point P0 = (x,y)
@@ -51,7 +48,5 @@ def main():
     sharedPoint = multiplyWithPoint(multiplier,[102,22])
     print(sharedPoint)
     
-
-
 if __name__ == "__main__":
     main()
